@@ -1,0 +1,31 @@
+#one {
+    background-color:rgb(0,0,0);
+    height: 400px;
+    width: 400px;
+    margin-top: 120px;
+    float: left;
+
+
+}
+
+#two {
+    background-color: #303030;
+    border: 30px;
+    height: 200px;
+    width: 200px;
+    margin-top: 150px;
+   float:right;
+
+
+}
+
+
+
+#square3 {
+    background-color:#000000;
+    border: 20px solid rgb(0,0,0);
+    height: 60px;
+    width: 60px;
+    display: block;
+  
+}
