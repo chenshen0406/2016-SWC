@@ -1,8 +1,8 @@
 #one {
     background-color:rgb(255,250,250);
-    height: 200px;
-    width: 200px;
-    margin-top: 120px;
+    height: 100px;
+    width: 100px;
+    margin-top: 180px;
     float: left;
 
 
@@ -10,10 +10,10 @@
 
 #two {
     background-color:rgb(255,250,250);
-    height: 800px;
-    width:800px;
+    height: 400px;
+    width:400px;
     margin-top: 120px;
-    float:left;
+    float:right;
 
 
 }
@@ -22,9 +22,9 @@
 
 #three {
     background-color:rgb(255,250,250);
-      height:400px;
-    width: 400px;
-      margin-top: 120px;
+      height:300px;
+    width: 300px;
+      margin-top: 400px;
         float:left;
 
 

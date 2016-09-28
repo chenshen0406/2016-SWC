@@ -1,12 +1,13 @@
 h1{
+    color: blue;
     font-size:70pt;
-    color:blue;
+
 }
 h2{
     color:purple;
     font-style: italic;
 }
 h3{
-     color:grey;
+    color:gray;
      font-weight: lighter;
 }
