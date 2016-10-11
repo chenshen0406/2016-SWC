@@ -48,6 +48,13 @@ function draw(){
 
 draw();
 
+  ctx.strokeStyle = "black";
+  ctx.lineWidth=5;
+  ctx.stroke();
+}
+
+draw();
+
 function buttonClicked() {
   document.getElementById("datefield").innerHTML = Date();
 }

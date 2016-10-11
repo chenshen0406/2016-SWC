@@ -1,0 +1,35 @@
+body {
+
+       font-family: 'helvetica', sans-serif;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       position: fixed;
+       top: 0px;
+       bottom: 0px;
+       left: 0px;
+       right: 0px;
+     }
+     canvas {
+       border: 1px solid hsl(0,10%,90%);
+       width: auto;
+       height: 50%;
+       background: white;
+
+     }
+     .container {
+         text-align: center;
+         width: 600px;
+         padding: 30px;
+         margin: auto;
+     }
+     a {
+         text-decoration: none;
+     }
+     .button {
+         display: inline-block;
+         background: #517fa4;
+         color: white;
+         margin: 20px auto;
+         padding: 15px 10px;
+         width: 100px;
