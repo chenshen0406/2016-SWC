@@ -46,14 +46,14 @@ shen.drawTop = function(ctx) {
   // ctx.beginPath();
   // ctx.arc(horizontalCenter, 120, 120, 0, circleDegrees);
   // ctx.fill();
-  drawImage('head.jpg', ctx, 0, 0);
+  drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/head.jpg', ctx, 0, 0);
 };
 
 shen.drawMiddle = function(ctx) {
-drawImage('body.jpg', ctx, 0, 240);
+drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/body.jpg', ctx, 0, 240);
 
 shen.drawBottom = function(ctx) {
-drawImage('legs.jpg', ctx, 0, 480);
+drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/legs.jpg', ctx, 0, 480);
 shen.drawCorpse = function(ctx) {
   shen.drawTop(ctx);
   shen.drawMiddle(ctx);
