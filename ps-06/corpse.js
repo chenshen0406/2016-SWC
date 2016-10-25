@@ -1,5 +1,6 @@
 var myCanvas = document.getElementById('corpse');
 var drawingPad = myCanvas.getContext('2d');
+
 var circleDegrees = 2 * Math.PI;
 var y0  = 0;
 var y1 = 240;
