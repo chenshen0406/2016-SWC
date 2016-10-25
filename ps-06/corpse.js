@@ -11,17 +11,18 @@ var x2 = 275; // right connection
 var width = x3 = 400;
 var horizontalCenter = 200; // centerLine
 
-var shen = {};
+var chenshen0406 = {};
 
 var drawImage = function(filename, ctx, x, y) {
   var img = document.createElement("img");
   img.src = filename;
   img.addEventListener("load", function() {
     ctx.drawImage(img, x, y);
+    //ctx.drawImage(ctx, file,x,y)
   });
 }
 
-shen.drawGrid = function(ctx) {
+chenshen0406.drawGrid = function(ctx) {
   ctx.beginPath();
   ctx.moveTo(x1,y0);
   ctx.lineTo(x1,y3);
@@ -51,14 +52,15 @@ chenshen0406.drawTop = function(ctx) {
 
 chenshen0406.drawMiddle = function(ctx) {
 drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/body.jpg', ctx, 0, 240);
-
+}
 chenshen0406.drawBottom = function(ctx) {
 drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/legs.jpg', ctx, 0, 480);
+}
 chenshen0406.drawCorpse = function(ctx) {
   chenshen0406.drawTop(ctx);
   chenshen0406.drawMiddle(ctx);
   chenshen0406.drawBottom(ctx);
-  //shen.drawGrid(ctx);
+
 };
 
 window.chenshen0406 = chenshen0406;
