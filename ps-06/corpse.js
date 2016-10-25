@@ -41,7 +41,7 @@ shen.drawGrid = function(ctx) {
 }
 
 
-shen.drawTop = function(ctx) {
+chenshen0406.drawTop = function(ctx) {
   // draw a round head:
   // ctx.beginPath();
   // ctx.arc(horizontalCenter, 120, 120, 0, circleDegrees);
@@ -49,16 +49,16 @@ shen.drawTop = function(ctx) {
   drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/head.jpg', ctx, 0, 0);
 };
 
-shen.drawMiddle = function(ctx) {
+chenshen0406.drawMiddle = function(ctx) {
 drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/body.jpg', ctx, 0, 240);
 
-shen.drawBottom = function(ctx) {
+chenshen0406.drawBottom = function(ctx) {
 drawImage('https://chenshen0406.github.io/2016-SWC/ps-06/legs.jpg', ctx, 0, 480);
-shen.drawCorpse = function(ctx) {
-  shen.drawTop(ctx);
-  shen.drawMiddle(ctx);
-  shen.drawBottom(ctx);
+chenshen0406.drawCorpse = function(ctx) {
+  chenshen0406.drawTop(ctx);
+  chenshen0406.drawMiddle(ctx);
+  chenshen0406.drawBottom(ctx);
   //shen.drawGrid(ctx);
 };
 
-window.shen = shen;
+window.chenshen0406 = chenshen0406;
