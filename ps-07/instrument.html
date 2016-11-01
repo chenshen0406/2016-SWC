@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Instrument</title>
+    <link rel="stylesheet" href="instrument.css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Face dance</h1>
+    <h2>Shen's Homework</h2>
+    <h3> Nov.1 2016</h3>
+    <script>
+      var C = 2;
+      var count = C;
+
+      function blink1() {
+      count--;
+      var img = document.getElementById("bb");
+
+      img.src = "1.png";
+      if (count < 0) {
+                  count = C;
+                  return;
+                  } else {
+                  setTimeout(blink2, 500);
+                  }
+
+
+                  }
+
+                  function blink2() {
+                  var img = document.getElementById("bb");
+                  img.src = "4.png";
+                  setTimeout(blink1, 500);
+                  }
+
+                  function eyebrow1() {
+count--;
+                  var img = document.getElementById("bb");
+                  img.src = "1.png";
+                  if (count < 0) {
+                              count = C;
+                              return;
+                              } else {
+                              setTimeout(eyebrow2, 500);
+                              }
+                              }
+
+                              function eyebrow2() {
+                              var img = document.getElementById("bb");
+                              img.src = "5.png";
+                              setTimeout(eyebrow1, 500);
+                              }
+                              </script>
+    <img src="1.png" id="bb" />
+
+    <br>
+    <button onclick="blink1()">Eyes</button>
+    <button onclick="eyebrow1()">Eyebrows</button>
+
+  </body>
+</html>
