@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>demo</title>
+  <style type="text/css">
+   body {
+    margin:0; padding:0;
+   }
+   ul {
+    list-style:none; margin:0; padding:0;
+   }
+   li {
+    position:absolute;
+   }
+   #power {
+    font-size:50px; line-height:100px; border:2px solid green; color:green;
+    position:absolute; right:20px; bottom:20px;
+   }
+  </style>
+ </head>
+ <body>
+  <ul id="canvas"></ul>
+ </body>
+ <script type="text/javascript">
+  var $ = function(id) {
+   return document.getElementById(id);
+  }
+  var $_name = function(tag) {
+   return document.getElementsByTagName(tag);
+  }
+  var color = function() {
+   var _color = "rgb(";
+   _color += Math.round(Math.random()*255);
+   _color += ",";
+   _color += Math.round(Math.random()*255);
+   _color += ",";
+   _color += Math.round(Math.random()*255);
+   _color += ")";
+   return _color;
+  }
+  var createLi = function(attr) {
+   var ele = document.createElement("li");
+   ele.style.backgroundColor = attr.bgColor || "black";
+   ele.style.left = attr.left + "px";
+   ele.style.top = attr.top + "px";
+   ele.style.width = ele.style.height = "15px";
+   ele.onmouseover = function() {
+    var _self = this;
+    var _rotate = 0;
+    if(_self.interval) {
+     clearInterval(_self.interval);
+     _self.style.backgroundColor = _self._backgroundColorBK;
+    }
+    _self._backgroundColorBK = _self.style.backgroundColor;
+    _self.style.backgroundColor = color();
+    _self.interval = setInterval(function() {
+     _self.style.webkitTransform = "rotate("+_rotate+"deg)";
+     _rotate += 30;
+     if(_rotate > 360) {
+      clearInterval(_self.interval);
+      _self.onmouseover = null;
+      _self.style.backgroundColor = _self._backgroundColorBK;
+      move(_self);
+      return;
+     }
+    }, 100);
+   }
+   return ele;
+  }
+  var loca = {
+   x: 1000,
+   y: 0
+  };
+  var move = function(obj) {
+   var _self = obj;
+   var curX = parseInt(_self.style.left);
+   var curY = parseInt(_self.style.top);
+   var sX = loca.x - curX;
+   var sY = loca.y - curY;
+   var addX = sX/36;
+   var addY = sY/36;
+   var rotate = 0;
+   var backgroundColorBK = _self.style.backgroundColor;
+   _self.interval = setInterval(function() {
+    _self.style.width = _self.style.height = (parseInt(_self.style.height) + 5) + "px";
+    _self.style.webkitTransform = "rotate("+rotate+"deg)";
+    curX += addX;
+    curY += addY;
+    _self.style.left = curX + "px";
+    _self.style.top = curY + "px";
+    _self.style.backgroundColor = color();
+    rotate += 10;
+    if(rotate > 360) {
+     _self.style.left = loca.x + "px";
+     _self.style.top = loca.y + "px";
+     clearInterval(_self.interval);
+     _self.style.backgroundColor = backgroundColorBK;
+     return;
+    }
+   }, 30);
+  }
+  var init = function() {
+   var ul = $("canvas");
+   for(var i=50; i<90; i++) {
+    for(var j=50; j<90; j++) {
+     var color = "rgb("+i+","+j+","+Math.round(Math.random()*255)+")";
+     ul.appendChild(createLi({bgColor: color, left:(j-50)*16 ,top:(i-50)*16}));
+    }
+   }
+  }
+  var main = function() {
+   init();
+  }
+  main();
+ </script>
+</html>

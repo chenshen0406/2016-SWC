@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 4em;
+  font-family: 'Rubik';
+  font-size: 10pt;
+  color: #41b6c4;
+  background-color: “white”;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+canvas {
+  border: 1px solid black;
+  background-color: white;
+  width: 500px;
+}
