@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 4em;
+  font-family: 'Rubik';
+  font-size: 10pt;
+  color: green;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#walk {
+  border: 2px solid red;
+}
