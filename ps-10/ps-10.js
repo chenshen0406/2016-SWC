@@ -1,9 +1,9 @@
 var dataset = {
-  x: [
-    "Other North America", "Europe", "Asia", "All foreign born", "Latin Africa",
-    "Ocenia", "U.S. born"
-  ],
-  y: [41, 37, 35, 30, 27, 21, 18]
+  //x: [
+    //"Other North America", "Europe", "Asia", "All foreign born", "Latin Africa",
+    //"Ocenia", "U.S. born"
+  //],
+  y: [41, 37, 35, 34, 33, 30, 27, 21, 18]
 };
 
 var height =700;
@@ -11,19 +11,19 @@ var width = 700;
 var margin = {
   left: 100,
   bottom: 50,
-  right: 50,
+  right: 80,
   top: 50
 };
 
 // xscale
 var xScale = d3.scaleBand()
-  .domain([0,1,2,3,4,5,6])//dataset.map(function (d,i){
+  .domain([0,1,2,3,4,5,6,7,8])//dataset.map(function (d,i){
     //return d[i]
   //}
   .range([margin.left, width - margin.right]);
 // yscale
 var yScale = d3.scaleLinear()
-  .domain([0, d3.max(dataset.y)])
+  .domain([d3.max(dataset.y)+10,0])
   .range([margin.left, height - margin.top - margin.bottom]);
 // x，y
 var xAxis = d3.axisBottom()
@@ -40,6 +40,7 @@ svg.append('g')
 
 svg.append('g')
   .attr('class', 'axis')
+  .attr('transform', 'translate(100,1)')
   .call(yAxis);
 
   svg.append("text")
