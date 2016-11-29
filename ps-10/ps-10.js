@@ -1,3 +1,4 @@
+
 var dataset = {
   //x: [
     //"Other North America", "Europe", "Asia", "All foreign born", "Latin Africa",
@@ -32,6 +33,35 @@ var yAxis = d3.axisLeft()
   .scale(yScale);
 
 var svg = d3.select('svg');
+
+function biggen(datum,index) {
+  var elem = d3.select(this);
+  d3.select('.footnote').transition().style("opacity", "1");
+  //d3.select("#age").text(datum.age)
+  d3.select("#percent").text(datum.percent)
+  elem.classed("selected", true)
+  elem.transition()
+    .duration(250)
+    .delay(0)
+    .ease(d3.easeElastic)
+    .append('rect')
+    .attr('class', 'bar')
+    //.attr("r", 20);
+
+}
+
+function smallen(datum,index) {
+  var elem = d3.select(this);
+  d3.select('.footnote').transition().duration(1000).style("opacity", "0");
+  elem.classed("selected", false)
+  elem.transition()
+    .duration(1000)
+    .delay(10)
+    .append('rect')
+    .attr('class', 'bar')
+    //.attr("r", 10);
+
+}
 
 svg.append('g')
   .attr('class', 'axis')
