@@ -5,7 +5,7 @@
   count--;
   var img = document.getElementById("bb");
 
-  img.src = "1.png";
+  img.src = "img/1.png";
   if (count < 0) {
               count = C;
               return;
@@ -18,14 +18,14 @@
 
               function blink2() {
               var img = document.getElementById("bb");
-              img.src = "4.png";
+              img.src = "img/4.png";
               setTimeout(blink1, 500);
               }
 
               function eyebrow1() {
 count--;
               var img = document.getElementById("bb");
-              img.src = "1.png";
+              img.src = "img/1.png";
               if (count < 0) {
                           count = C;
                           return;
@@ -36,6 +36,6 @@ count--;
 
                           function eyebrow2() {
                           var img = document.getElementById("bb");
-                          img.src = "5.png";
+                          img.src = "img/5.png";
                           setTimeout(eyebrow1, 500);
                           }
